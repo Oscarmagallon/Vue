@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <LINK REL=StyleSheet HREF="menu.css" TYPE="text/css" >
+
+    <title>Proyecto de Peliculas</title>
+</head>
+<body>
+    <div id="app">
+
+        <h1 v-html="titulo"></h1>
+        <nav
+            ><ul>
+                <li @click="abrirapp()"><a href="#">Inicio</a></li>
+                <li><a href="#">Populares</a></li>
+                <li><a href="#">Detalle</a></li>
+                <li><a href="#">Ver todas las peliculas</a></li>
+            </ul>
+        </nav>
+      <mejor-valoradas></mejor-valoradas>
+    
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="ComponentesPeliculas/Pelicula.js"></script> 
+    <script src="ComponentesPeliculas/MejorValoradas.js"></script>
+
+    <script>
+        let vm = new Vue({
+            el: '#app',
+
+            data() {
+                return {
+                    titulo: 'Catalogo de<strong> Peliculas </strong>'
+                }
+            },
+            components: {
+                MejorValoradas
+            },
+            methods: {
+
+                abrirapp(){
+                    location.href="index.html"
+
+                },
+            
+
+            }
+        })
+    </script>
+</body>
+</html> 
