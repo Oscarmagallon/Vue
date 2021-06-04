@@ -7,7 +7,14 @@ let Pelicula = {
             >
             <h2> {{title | mayusculas}} </h2>
             <img :src="cover">
-            <p v-text="synopsis"></p>           
+            <p v-text="synopsis" v-if="versynopsis"></p>
+            <div>
+               
+
+                <button @click="versynopsis=!versynopsis">
+                    synopsis
+                </button>
+            </div>           
         </div>
     `,
 
@@ -16,7 +23,8 @@ let Pelicula = {
     data(){ 
 
         return{
-            
+            versynopsis:false
+
             
         }
     },

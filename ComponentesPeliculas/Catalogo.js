@@ -1,6 +1,6 @@
 const APIKEY = '7fa41e64945fa2fe482ea00acdb454be'
 const BASEURL = 'https://api.themoviedb.org/3/'
-let MejorValoradas = {
+let catalogo = {
     template: `
     
 
@@ -13,7 +13,8 @@ let MejorValoradas = {
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
                 <pelicula 
                     :title="pelicula.title" 
-                    :cover = "'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+pelicula.poster_path "            >
+                    :cover = "'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+pelicula.poster_path "
+                    :synopsis = "pelicula.overview"            >
                 </pelicula>    
             </div>
         </div>
@@ -24,11 +25,11 @@ let MejorValoradas = {
         return{
             titulo:'Películas',
             peliculas: [],
-            busqueda:'',
+             busqueda:''
         }
     },  
     components:{
-        Pelicula 
+        Pelicula
     },
     methods:{
         getMejorValoradas(){
@@ -48,7 +49,7 @@ let MejorValoradas = {
                 .then(data => {
                     this.peliculas = data.results   
                     console.log(data.results)
-                })
+                }) 
 
         },
 
