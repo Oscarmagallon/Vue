@@ -13,7 +13,9 @@ let MejorValoradas = {
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
                 <pelicula 
                     :title="pelicula.title" 
-                    :cover = "'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+pelicula.poster_path "            >
+                    :cover = "'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+pelicula.poster_path "
+                    :synopsis="pelicula.overview"
+                    >
                 </pelicula>    
             </div>
         </div>

@@ -9,12 +9,15 @@
 <body>
     <div id="app">
         <h1 v-html="titulo"></h1>
-        <nav><ul>
-        <li @click="abrirapp()"><a href="#">Inicio</a></li>
-        <li><a href="#">Populares</a></li>
-        <li><a href="#">Detalle</a></li>
-        <li><a href="#">Ver todas las peliculas</a></li>
-    </ul></nav>
+        <nav>
+            <ul>
+                <li @click="abrirapp()"><a href="#">Inicio</a></li>
+                <li ><a href="abrirPopulares()">Populares</a></li>
+                <li @click="catalogo()"><a href="#">Catalogo</a></li>
+                <li><a>Mejor Valoradas</a></li>
+              
+            </ul>
+        </nav>
         
         
         <peliculas></peliculas>
