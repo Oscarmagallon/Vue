@@ -7,11 +7,13 @@ body,div{
     
     text-align: right;
     color: black;
+    display: inline-block;
 
 }
 
 
 #synopsis{
+
     float: left;
     height: 600px;
     width: 25%; 
