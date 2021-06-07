@@ -3,14 +3,13 @@ let Pelicula = {
         <div 
             style="width:300px;
             display:inline-block;
-            vertical-align:top"
-            >
+            vertical-align:top" 
+        >
             <h2> {{title | mayusculas}} </h2>
             <img :src="cover">
             <p v-text="synopsis" v-if="versynopsis"></p>
-            <div>
+            <div style="display:block">
                
-
                 <button @click="versynopsis=!versynopsis">
                     synopsis
                 </button>
@@ -30,7 +29,7 @@ let Pelicula = {
     },
     filters:{
             mayusculas(value){
-                return value.toUpperCase()
+                return value
             }
     },
     methods:{

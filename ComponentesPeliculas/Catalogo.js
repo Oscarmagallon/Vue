@@ -6,6 +6,8 @@ let catalogo = {
 
         <div>     
             <div>
+                <br>
+                <br>
                 <input v-model="busqueda" @keydown.enter="buscar()">
                 <button @click="buscar()">Buscar</button>
             </div>

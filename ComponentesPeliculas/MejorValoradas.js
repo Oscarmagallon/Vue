@@ -6,8 +6,9 @@ let MejorValoradas = {
 
         <div>     
             <div>
-                <input v-model="busqueda" @keydown.enter="buscar()">
-                <button @click="buscar()">Buscar</button>
+            <br>
+            <br>
+               
             </div>
             <h2 v-text="titulo"></h2>
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
@@ -32,6 +33,7 @@ let MejorValoradas = {
     components:{
         Pelicula 
     },
+
     methods:{
         getMejorValoradas(){
             const URL = `${BASEURL}discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc&api_key=${APIKEY}`

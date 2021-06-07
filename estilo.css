@@ -5,9 +5,10 @@ h1{
 
 body,div{
     
-    text-align: right;
+    text-align: left;
     color: black;
     display: inline-block;
+    
 
 }
 
@@ -18,23 +19,8 @@ body,div{
     height: 600px;
     width: 25%; 
     color: black;
-     
+         
 }
 
-#cambiarPag li{
-    color: black;
-    list-style: none;
-    display: inline;
-    padding: 10px;
-    background-color: white;
-}
-#cambiarPag a{
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-    
-}
-#cambiarPag li:hover{
-    background-color: rgb(234, 0, 255);
-}   
+
+

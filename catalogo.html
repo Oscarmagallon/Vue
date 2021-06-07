@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+
+    <LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" >
     <LINK REL=StyleSheet HREF="menu.css" TYPE="text/css" >
 
     <title>Proyecto de Peliculas</title>
@@ -10,13 +12,13 @@
     <div id="app">
 
         <h1 v-html="titulo"></h1>
-        <nav
-            > <ul>
+        <nav>
+            <ul>
                 <li @click="abrirapp()"><a href="#">Inicio</a></li>
-                <li ><a href="abrirPopulares()">Populares</a></li>
+                <li @click="abrirPopulares()"><a >Populares</a></li>
                 <li @click="catalogo()"><a href="#">Catalogo</a></li>
-                <li><a>Mejor Valoradas</a></li>
-              
+                <li @click="mejorValoradas()"><a>Mejor Valoradas</a></li>
+          
             </ul>
         </nav>
       <catalogo></catalogo>
@@ -41,13 +43,22 @@
             },
             methods: {
 
-                abrirapp(){
-                    location.href="index.html"
+            abrirapp(){
+                location.href="index.html"
 
-                },
-                abrirPopulares(){
-                    location.href = "peliculas.html"
-                }
+            },
+            mejorValoradas(){
+                location.href = "mejorValoradas.html"
+            },
+
+            abrirPopulares(){
+                location.href = "peliculas.html"
+            },
+  
+            catalogo(){
+              alert("ya estas en esta pagina");
+            }
+            
             
 
             }

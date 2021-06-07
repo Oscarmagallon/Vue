@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <LINK REL=StyleSheet HREF="estilo.css" TYPE="text/css" >
     <LINK REL=StyleSheet HREF="menu.css" TYPE="text/css" >
 
     <title>Proyecto de Peliculas</title>
@@ -12,9 +13,9 @@
         <nav>
             <ul>
                 <li @click="abrirapp()"><a href="#">Inicio</a></li>
-                <li ><a href="abrirPopulares()">Populares</a></li>
+                <li @click="abrirPopulares()"><a >Populares</a></li>
                 <li @click="catalogo()"><a href="#">Catalogo</a></li>
-                <li><a>Mejor Valoradas</a></li>
+                <li @click="mejorValoradas()"><a>Mejor Valoradas</a></li>
               
             </ul>
         </nav>
@@ -45,6 +46,17 @@
                 location.href="index.html"
 
             },
+            mejorValoradas(){
+                location.href = "mejorValoradas.html"
+            },
+
+            abrirPopulares(){
+                location.href = "peliculas.html"
+            },
+  
+            catalogo(){
+                location.href = "catalogo.html"
+            }
             
 
             }

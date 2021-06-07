@@ -7,12 +7,13 @@ let Peliculas = {
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
 
                 <pelicula 
+                    :id = "pelicula.id"
                     :title="pelicula.title"
                     :cover="'https://image.tmdb.org/t/p/w185_and_h278_bestv2'+pelicula.poster_path"
                     :synopsis = "pelicula.overview"
                 >
-            </pelicula>    
-        </div>
+                </pelicula>    
+            </div>
 
     
 
@@ -27,6 +28,12 @@ let Peliculas = {
     },
     components:{
         Pelicula
+    },
+    props: {
+        id: {
+            type: String,
+            required: true
+        },
     },
     methods:{
         getPopularMovies(){

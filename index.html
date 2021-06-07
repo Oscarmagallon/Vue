@@ -10,11 +10,11 @@
     <div>
         <p v-html="saludo"></p>
         <nav>
-            ><ul>
+            <ul>
                 <li @click="abrirapp()"><a href="#">Inicio</a></li>
-                <li ><a href="abrirPopulares()">Populares</a></li>
+                <li @click="abrirPopulares()"><a >Populares</a></li>
                 <li @click="catalogo()"><a href="#">Catalogo</a></li>
-                <li><a>Mejor Valoradas</a></li>
+                <li @click="mejorValoradas()"><a>Mejor Valoradas</a></li>
               
             </ul>
         </nav>
@@ -40,13 +40,22 @@
             },
 
             methods: {
-                abrirapp(){
-                    location.href ="peliculas.html"
-                },
+            abrirapp(){
+                location.href="index.html"
 
-                abrirCatalogo(){
-                    location.href="catalogo.html"
-                }
+            },
+            mejorValoradas(){
+                location.href = "MejorValoradas.html"
+            },
+
+            abrirPopulares(){
+                location.href = "peliculas.html"
+            },
+  
+            catalogo(){
+                location.href = "catalogo.html"
+            }
+            
 
             },
 

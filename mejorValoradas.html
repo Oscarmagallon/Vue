@@ -12,12 +12,12 @@
     <div id="app">
 
         <h1 v-html="titulo"></h1>
-        <nav
-            ><ul>
+        <nav>
+            <ul>
                 <li @click="abrirapp()"><a href="#">Inicio</a></li>
-                <li ><a href="abrirPopulares()">Populares</a></li>
+                <li @click="abrirPopulares()"><a >Populares</a></li>
                 <li @click="catalogo()"><a href="#">Catalogo</a></li>
-                <li><a>Mejor Valoradas</a></li>
+                <li @click="mejorValoradas()"><a>Mejor Valoradas</a></li>
               
             </ul>
         </nav>
@@ -28,6 +28,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="ComponentesPeliculas/Pelicula.js"></script> 
     <script src="ComponentesPeliculas/MejorValoradas.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+    
 
     <script>
         let vm = new Vue({
@@ -43,18 +46,22 @@
             },
             methods: {
 
-                abrirapp(){
-                    location.href="index.html"
+            abrirapp(){
+                location.href="index.html"
 
-                },
+            },
+            mejorValoradas(){
+                confirm("klk")
+            },
 
-                catalogo(){
-                    location.href= "MejorValoradas.html"
-                },
-
-                abrirPopulares(){
-                    location.href="peliculas.html"
-                }
+            abrirPopulares(){
+                location.href = "peliculas.html"
+            },
+  
+            catalogo(){
+                location.href = "catalogo.html"
+            }
+            
             
 
             }
