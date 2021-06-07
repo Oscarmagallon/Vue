@@ -1,6 +1,6 @@
 let PeliculasDet = {
     template:`
-        <div v-if="peliculas">
+        <div v-if="pelicula">
             <h1>{{ pelicula.title}} (ref: {{ id }})</h1>
             <img :src="pelicula.backdrop_path | fondoURL">
             <img :src="pelicula.poster_path | coverURL">
