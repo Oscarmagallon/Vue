@@ -3,7 +3,7 @@ const BASEURL = 'https://api.themoviedb.org/3/'
 let Peliculas = {
     template: `
         <div>       
-            <h2 v-text="titulo"></h2>
+            <h2 id = "titulo" v-text="titulo"></h2>
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
 
                 <pelicula 

@@ -11,7 +11,7 @@
 <body>
     <div id="app">
 
-        <h1 v-html="titulo"></h1>
+        <h1 id = "titulo" v-html="titulo"></h1>
         <nav>
             <ul>
                 <li @click="abrirPopulares()"><a >Populares</a></li>
@@ -37,7 +37,7 @@
 
             data() {
                 return {
-                    titulo: 'Catalogo de<strong> Peliculas </strong>'
+                    titulo: 'Peliculas de<strong> mejor valoradas </strong>'
                 }
             },
             components: {

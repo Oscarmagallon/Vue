@@ -1,5 +1,5 @@
 h1{
-    color: red;
+    color: brown;
     text-align: center;
 }
 
@@ -14,7 +14,7 @@ body,div{
 }
 
 body{
-    background-image: url(fondoo.png);
+    background-image: url(9911.jpg);
     background-size: 100%;
     
 }
@@ -28,6 +28,15 @@ body{
     color: black;
          
 }
+#buscar{
+    padding-left: 40%;
+}
 
+#texto{
+    text-align: center;
+}
+#titulo{
+    text-align: center;
+}
 
 

@@ -3,15 +3,17 @@ const BASEURL = 'https://api.themoviedb.org/3/'
 let catalogo = {
     template: `
     
-
+   
         <div>     
-            <div>
-                <br>
+            <p id= "texto">En esta pagina podras buscar cualquier Pelicula de nuestro catalogo y ver su synopsis.
+            Que lo disfrutes
+            </p>
+            <div id = "buscar">
                 <br>
                 <input v-model="busqueda" @keydown.enter="buscar()">
                 <button @click="buscar()">Buscar</button>
             </div>
-            <h2 v-text="titulo"></h2>
+            <h2 id="titulo" v-text="titulo"></h2>
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
                 <pelicula 
                     :title="pelicula.title" 

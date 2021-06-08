@@ -10,7 +10,7 @@ let MejorValoradas = {
             <br>
                
             </div>
-            <h2 v-text="titulo"></h2>
+            <h2 id="titulo"  v-text="titulo"></h2>
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
                 <pelicula 
                     :title="pelicula.title" 
