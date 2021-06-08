@@ -30,10 +30,7 @@ let Peliculas = {
         Pelicula
     },
     props: {
-        id: {
-            type: String,
-            required: true
-        },
+  
     },
     methods:{
         getPopularMovies(){

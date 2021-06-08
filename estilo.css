@@ -8,8 +8,15 @@ body,div{
     text-align: left;
     color: black;
     display: inline-block;
+    margin: 30px;
     
 
+}
+
+body{
+    background-image: url(fondoo.png);
+    background-size: 100%;
+    
 }
 
 
