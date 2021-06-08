@@ -29,14 +29,18 @@ body{
          
 }
 #buscar{
+    display: inline-block;
+    position: relative;
     padding-left: 40%;
+    
+    
 }
-
 #texto{
     text-align: center;
 }
 #titulo{
     text-align: center;
 }
+
 
 

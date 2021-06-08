@@ -1,10 +1,6 @@
 let Pelicula = {
     template: `
-        <div 
-            style="width:300px;
-            display:inline-block;
-            vertical-align:top" 
-        >
+        <div>
             <h2> {{title | mayusculas}} </h2>
             <img :src="cover">
             <p v-text="synopsis" v-if="versynopsis"></p>
