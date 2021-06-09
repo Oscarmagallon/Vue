@@ -10,8 +10,8 @@ let catalogo = {
             </p>
             <div id = "buscar">
                 <br>
-                <input id = "buscar" v-model="busqueda" @keydown.enter="buscar()"> <br>
-                <button id = "boton" @click="buscar()">Buscar</button>
+                <input type= "text" v-model="busqueda" @keydown.enter="buscar()">
+                <button @click="buscar()">Buscar</button>
             </div>
             <h2 id="titulo" v-text="titulo"></h2>
             <div v-for="(pelicula,index) in peliculas" :key="index"> 
@@ -49,17 +49,18 @@ let catalogo = {
 
         },
         buscar(){
-            if(this.busqueda){
-
-            
-            let URL = `${BASEURL}search/movie?api_key=${APIKEY}&language=es-ES&query=${this.busqueda}`
+            if (this.busqueda) {
             fetch(URL)
                 .then(response => response.json())
                 .then(data => {
                     this.peliculas = data.results   
                     console.log(data.results)
-                })
-            } 
+                }) 
+                
+            }
+            
+            
+        
 
         },
 
